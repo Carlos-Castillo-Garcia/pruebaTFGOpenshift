@@ -23,5 +23,5 @@ RUN mvn package -D maven.test.skip=true
 FROM openjdk:11-jdk
 COPY --from=0 /build/target/TFGRestaurant-0.0.1-SNAPSHOT.jar /app/target/TFGRestaurant-0.0.1-SNAPSHOT.jar
 
-EXPOSE 8080
-ENTRYPOINT [ "java", "-jar", "/app/target/TFGRestaurant-0.0.1-SNAPSHOT.jar", "--server.port=8080" ]
+EXPOSE 8084
+ENTRYPOINT [ "java", "-jar", "/app/target/TFGRestaurant-0.0.1-SNAPSHOT.jar", "--server.port=8084" ]
